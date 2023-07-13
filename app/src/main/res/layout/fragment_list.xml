@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profileFragments.ListFragment">
+
+    <LinearLayout
+        android:paddingHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="5dp"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/filter_list">
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:elevation="5dp"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="0.25"
+            android:id="@+id/dropdown_status"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_spinner_white"
+            android:padding="6dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/nunitosans"
+            android:textFontWeight="900"
+            app:spinner_arrow_show="true"
+            app:spinner_arrow_tint="@color/black"
+            app:spinner_popup_animation="fade"
+            app:spinner_popup_background="@color/edit_button"
+            app:spinner_item_array="@array/status_profile"
+            app:spinner_item_height="36dp"
+            app:spinner_selected_item_background="@color/white"
+            app:spinner_popup_elevation="14dp"
+            app:spinner_divider_color="@color/gray"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.2dp"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:elevation="5dp"
+            android:layout_weight="2.5"
+            android:id="@+id/search_view_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            style="@style/SearchViewStyle"
+            app:queryHint="Search..."
+            app:iconifiedByDefault="false"
+            android:queryBackground="@color/transparent"
+            app:queryBackground="@android:color/transparent"
+            android:background="@drawable/background_search_list"
+            app:autoShowKeyboard="false"
+            app:searchIcon="@drawable/search_icon" />
+
+        <com.skydoves.powerspinner.PowerSpinnerView
+            android:elevation="5dp"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="0.25"
+            android:id="@+id/dropdown_sort"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_anime_edit_button"
+            android:padding="6dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/nunitosans"
+            android:textFontWeight="1000"
+            android:hint="Sort"
+            android:textColorHint="@color/white"
+            app:spinner_arrow_show="true"
+            app:spinner_arrow_tint="@color/white"
+            app:spinner_popup_animation="fade"
+            app:spinner_popup_background="@color/edit_button"
+            app:spinner_item_array="@array/sort_profile"
+            app:spinner_item_height="36dp"
+            app:spinner_selected_item_background="@color/alpha_purple"
+            app:spinner_popup_elevation="14dp"
+            app:spinner_divider_color="@color/gray"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.2dp"/>
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_below="@+id/filter_list"
+        android:id="@+id/recycler_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

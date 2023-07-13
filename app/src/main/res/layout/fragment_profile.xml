@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout_profile"
+        android:background="@color/transparent"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints">
+
+                    <RelativeLayout
+                        android:paddingBottom="20dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/profile_chart"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile_picture"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginVertical="42dp"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="31sp"
+                            android:autoSizeMaxTextSize="31sp"
+                            android:autoSizeMinTextSize="12sp"
+                            android:autoSizeTextType="uniform"
+                            android:fontFamily="@font/nunitosansbold"
+                            android:text="SynJay"
+                            android:textColor="@color/white"
+                            android:textFontWeight="800" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/rating_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autoSizeMaxTextSize="18sp"
+                                android:autoSizeMinTextSize="5sp"
+                                android:autoSizeTextType="uniform"
+                                android:drawableTint="@color/white"
+                                android:drawableLeft="@drawable/coffe_bean"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/nunitosans"
+                                android:textFontWeight="600"
+                                android:text="8.40"
+                                android:textColor="@color/white"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:id="@+id/entries_text"
+                                android:paddingLeft="2dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autoSizeMaxTextSize="10sp"
+                                android:autoSizeMinTextSize="5sp"
+                                android:autoSizeTextType="uniform"
+                                android:drawablePadding="5dp"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/nunitosans"
+                                android:textFontWeight="800"
+                                android:text="(171 Entries)"
+                                android:textColor="@color/gray"
+                                android:gravity="center"
+                                android:textSize="11dp" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/days_text"
+                            android:paddingTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:autoSizeMaxTextSize="12sp"
+                            android:autoSizeMinTextSize="5sp"
+                            android:autoSizeTextType="uniform"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/nunitosans"
+                            android:textFontWeight="800"
+                            android:text="4630 Days"
+                            android:textColor="@color/gray"
+                            android:textSize="12dp" />
+                        <TextView
+                            android:id="@+id/eps_text"
+                            android:paddingTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:autoSizeMaxTextSize="12sp"
+                            android:autoSizeMinTextSize="5sp"
+                            android:autoSizeTextType="uniform"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/nunitosans"
+                            android:textFontWeight="800"
+                            android:text="2759 Eps"
+                            android:textColor="@color/gray"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/profile_tab_layout"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:background="#00ffffff"
+            app:tabGravity="center"
+            app:tabIndicator="@drawable/background_tabbar_rounded"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorGravity="stretch"
+            app:tabMode="fixed"
+            app:tabMaxWidth="0dp"
+            app:tabSelectedTextColor="@color/white" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/background_tabbar_line" />
+
+        <androidx.viewpager.widget.ViewPager
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/view_pager_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

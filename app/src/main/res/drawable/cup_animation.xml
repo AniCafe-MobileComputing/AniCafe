@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/cup1" android:duration="200"></item>
+    <item android:drawable="@drawable/cup1" android:duration="200"></item>
+    <item android:drawable="@drawable/cup2" android:duration="200"></item>
+    <item android:drawable="@drawable/cup3" android:duration="200"></item>
+    <item android:drawable="@drawable/cup4" android:duration="200"></item>
+    <item android:drawable="@drawable/cup5" android:duration="200"></item>
+    <item android:drawable="@drawable/cup6" android:duration="400"></item>
+
+</animation-list>

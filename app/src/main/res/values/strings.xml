@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Anigram</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string-array name="status_strings">
+        <item>COMPLETED</item>
+        <item>ON HOLD</item>
+        <item>WATCHING</item>
+        <item>DROPPED</item>
+        <item>PLAN TO WATCH</item>
+    </string-array>
+
+    <string-array name="status_profile">
+        <item>All</item>
+        <item>Completed</item>
+        <item>On Hold</item>
+        <item>Plan to Watch</item>
+        <item>Watching</item>
+        <item>Dropped</item>
+    </string-array>
+
+    <string-array name="sort_profile">
+        <item>Title</item>
+        <item>Episodes</item>
+        <item>Rating</item>
+        <item>Self rating</item>
+        <item>Status</item>
+    </string-array>
+
+    <string-array name="rating_strings">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+</resources>

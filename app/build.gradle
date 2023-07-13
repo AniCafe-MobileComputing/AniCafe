@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.anigram'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.anigram"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'com.github.jitpack:gradle-simple:2.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0-alpha10'
+    implementation 'com.google.android.material:material:1.9.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //RecylcerView Animations
+    implementation 'jp.wasabeef:recyclerview-animators:4.0.2'
+
+    //LoadingButton
+    implementation "com.github.leandroborgesferreira:loading-button-android:2.3.0"
+
+    //PopupDialog
+    implementation 'com.saadahmedev.popup-dialog:popup-dialog:1.0.3'
+
+    //PowerSpinner
+    implementation "com.github.skydoves:powerspinner:1.2.7"
+
+    //CircleImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //RetroFit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    //Blur
+    implementation 'com.github.Dimezis:BlurView:version-2.0.3'
+
+    //GSON
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.8'
+
+    //Youtube
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:12.0.0'
+
+    //GLIDE
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+
+    //Mal4J
+    implementation 'dev.katsute:mal4j:3.0.3'
+
+    //Volley
+    implementation 'com.android.volley:volley:1.2.1'
+
+    //Charts
+    implementation 'com.github.PhilJay:MPANdroidChart:v3.1.0'
+}

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            android:transitionName="cup"
+            android:elevation="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginVertical="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/logo"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/background_gradient" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="150dp"
+            >
+
+
+            <View
+                android:elevation="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/backdrop"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/welcome_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="48dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/ani3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center"
+                        android:fontFamily="@font/nunitosans"
+                        android:letterSpacing="-0.07"
+                        android:textFontWeight="800"
+                        android:gravity="center"
+                        android:text="Ani"
+                        android:textColor="@color/white"
+                        android:textSize="64dp" />
+
+                    <TextView
+                        android:id="@+id/cafe3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center"
+                        android:fontFamily="@font/mrsaintdelafield"
+                        android:gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:text="Cafe"
+                        android:textColor="@color/white"
+                        android:textSize="96dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/welcome_"
+                    android:layout_width="107dp"
+                    android:layout_height="39.24dp"
+                    android:layout_marginTop="95dp"
+                    android:fontFamily="@font/publicsans"
+                    android:letterSpacing="-0.07"
+                    android:textFontWeight="800"
+                    android:text="Welcome!"
+                    android:textColor="@color/gray"
+                    android:textSize="22sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/publicsans"
+                android:paddingHorizontal="20dp"
+                android:text="We will redirect you to myAnimelist but dont worry! You will return to us right back."
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textFontWeight="800"
+                android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/signin_button"
+                android:layout_height="60dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:paddingHorizontal="50dp"
+                android:layout_marginTop="234dp">
+
+                <View
+                    android:onClick="openMALWebView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/sign_in_button" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center"
+                    android:fontFamily="@font/publicsans"
+                    android:textFontWeight="800"
+                    android:letterSpacing="-0.03"
+                    android:text="Sign In"
+                    android:textColor="@color/white"
+                    android:textSize="32sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/create_acc_button"
+                android:layout_height="60dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:paddingHorizontal="50dp"
+                android:layout_marginTop="315dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/sign_up_button" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:fontFamily="@font/publicsans"
+                    android:textFontWeight="800"
+                    android:gravity="center"
+                    android:letterSpacing="-0.03"
+                    android:text="Create an Account"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

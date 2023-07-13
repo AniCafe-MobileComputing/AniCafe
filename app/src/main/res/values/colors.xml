@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#F3F3F4</color>
+    <color name="darkBlue">#08003D</color>
+    <color name="gray">#BCBCBC</color>
+    <color name="purple">#370058</color>
+    <color name="light_purple">#BD93D8</color>
+    <color name="alpha_purple">#5008003D</color>
+    <color name="red">#D11A2A</color>
+    <color name="light_blue">#49B6FF</color>
+    <color name="alpha_black">#90000000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="pink">#562b71</color>
+    <color name="edit_button">#7E6B8F</color>
+    <color name="brownish">#ceb9c3</color>
+
+
+    <color name="navline1">#70F3F3F4</color>
+    <color name="navline2">#30F3F3F4</color>
+    <color name="navline3">#05F3F3F4</color>
+
+</resources>

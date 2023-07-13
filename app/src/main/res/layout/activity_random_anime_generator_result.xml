@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".ui.RandomAnimeGeneratorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="3dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:elevation="20dp"
+                android:layout_gravity="center"
+                android:onClick="backButton"
+                android:background="@drawable/background_circle_white_stroke"
+                android:src="@drawable/back_button_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nunitosansbold"
+                android:gravity="center"
+                android:letterSpacing="-0.07"
+                android:paddingTop="15dp"
+                android:text="Shake!"
+                android:textColor="@color/white"
+                android:textSize="64sp" />
+
+            <TextView
+                android:id="@+id/goto_page"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:elevation="20dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:background="@drawable/background_circle_white_stroke"
+                android:fontFamily="@font/nunitosans"
+                android:textFontWeight="1000"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:text="GO TO PAGE"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-25dp"
+            android:fontFamily="@font/nunitosans"
+            android:letterSpacing="-0.07"
+            android:text="for different Anime"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+        <androidx.cardview.widget.CardView
+            android:elevation="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="257dp"
+            app:cardCornerRadius="20dp"
+            android:layout_height="354dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/random_anime_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="true"
+                    app:shapeAppearanceOverlay="@style/roundImageView20"
+                    tools:srcCompat="@tools:sample/avatars"
+                    android:transitionName="animePicture"
+                    tools:ignore="MissingConstraints" />
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:src="@drawable/gradient_stroke_centered"
+                    app:layout_constraintBottom_toTopOf="@+id/home_item_bottom"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/home_item_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/blur_bottom"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:src="@drawable/blur_bottom"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/random_anime_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:text="Demon Slayer"
+                        android:fontFamily="@font/nunitosansbold"
+                        android:textFontWeight="800"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeMaxTextSize="20sp"
+                        android:textColor="#f2edef"/>
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/background_shake_text">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Synopsis"
+                    android:fontFamily="@font/nunitosansbold"
+                    android:textSize="16sp"
+                    android:letterSpacing="0.02"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="25dp"/>
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:paddingBottom="20dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/random_anime_synopsis"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/nunitosans"
+                        android:letterSpacing="0.02"
+                        android:text="jweifekfewfwf ejwfkef jewifehf bfuwehjdfnfkdnfjdndf hfsjdf hsdufjd hdufjsf hujdshfj sdhjfsdf sddhddhdhdhdhdhdhdhhdhdhdhdhdhdhdhhdhdhdhdhdhdhdhhh dhsdfjdsjs djsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfd dhsujfhdfdfdfdfdfdfdfhdfhdfhdfhdfhhh fhwuwwwuwufhfffhh fsjdfdfdfdfdfdfdfde"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </ScrollView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

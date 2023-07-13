@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<item>
+		<!-- create gradient you want to use with the angle you want to use -->
+		<shape android:shape="rectangle" >
+			<gradient
+				android:angle="0"
+				android:startColor="@color/navline2"
+				android:centerColor="@color/white"
+				android:endColor="@color/navline2"
+				>
+			</gradient>
+			<corners android:topLeftRadius="15dp" android:topRightRadius="0dp"/>
+		</shape>
+	</item>
+
+	<item
+		android:id="@+id/gradient_line"
+		android:bottom="2dp"
+		android:left="0dp"
+		android:right="0dp"
+		android:top="2dp">
+		<shape xmlns:android="http://schemas.android.com/apk/res/android"
+			android:shape="rectangle" >
+			<gradient android:angle="90" android:startColor="@color/pink"  android:endColor="@color/pink" />
+			<corners android:topLeftRadius="15dp" android:topRightRadius="0dp"/>
+		</shape>
+	</item>
+
+
+</layer-list>
+

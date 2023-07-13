@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="SearchViewStyle">
+        <item name="android:editTextColor">@color/white</item>
+        <item name="hintTextColor">@color/white</item>
+        <item name="iconSize">12sp</item>
+    </style>
+
+    <style name="EditDialogTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+</resources>

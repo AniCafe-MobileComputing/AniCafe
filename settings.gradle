@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        google()
+        jcenter()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url "https://mvnrepository.com/artifact/dev.katsute/mal4j" }
+        maven { url "https://mvnrepository.com/artifact/at.mukprojects/giphy4j" }
+    }
+}
+rootProject.name = "Anigram"
+include ':app'

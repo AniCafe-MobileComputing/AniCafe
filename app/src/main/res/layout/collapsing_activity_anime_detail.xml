@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/pink"
+    app:layoutDescription="@xml/collapsing_activity_anime_detail_scene"
+    tools:context=".ui.AnimeDetailActivity">
+
+    <ImageView
+        android:background="@color/purple"
+        android:id="@+id/background_image_alternative"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:elevation="-3dp"
+        android:scaleType="centerCrop"
+        android:tintMode="src_atop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#6F000000" />
+
+    <ImageView
+        android:alpha="1"
+        android:id="@+id/backDetails"
+        android:onClick="backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:elevation="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_circle_white_stroke"
+        android:src="@drawable/back_button_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/add_or_edit_anime_button"
+        android:elevation="20dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:paddingRight="1dp"
+        android:gravity="center"
+        android:background="@drawable/background_circle_white_stroke"
+        android:fontFamily="@font/nunitosansbold"
+        android:textFontWeight="1000"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:spinning_bar_color="@color/white"
+        app:spinning_bar_padding="15dp"
+        app:spinning_bar_width="4dp"
+        app:initialCornerAngle="100dp"
+        android:text="ADD"/>
+
+<!--    <ImageView-->
+<!--        android:alpha="1"-->
+<!--        android:id="@+id/edit_details_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:elevation="20dp"-->
+<!--        android:paddingTop="20dp"-->
+<!--        android:paddingRight="15dp"-->
+<!--        android:src="@drawable/add_button_icon"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <RelativeLayout
+        android:id="@+id/relative_anime_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="167dp"
+        android:elevation="-2dp">
+
+        <View
+            android:id="@+id/background_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/background_gradient_stroke_animation"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/background_gradient_rounded"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@id/image_detail_card"
+        android:layout_width="160dp"
+        android:layout_height="240dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="70dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/background_image_alternative"
+        app:layout_constraintStart_toStartOf="@+id/background_image_alternative"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@color/black"
+            android:transitionName="animePicture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearanceOverlay="@style/roundImageView20" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_rankings"
+        android:alpha="1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/relative_anime_detail">
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/anime_ranking_placement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/nunitosans"
+                    android:gravity="center"
+                    android:lineSpacingExtra="-5sp"
+                    android:text="null"
+                    android:textColor="@color/white"
+                    android:textFontWeight="800"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitosansbold"
+                    android:gravity="center"
+                    android:lineSpacingExtra="-5sp"
+                    android:text="Ranked"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/anime_popularity_placement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/nunitosans"
+                    android:gravity="center"
+                    android:lineSpacingExtra="-5sp"
+                    android:text="null"
+                    android:textColor="@color/white"
+                    android:textFontWeight="800"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitosansbold"
+                    android:gravity="center"
+                    android:lineSpacingExtra="-5sp"
+                    android:text="Popularity"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="35dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="25dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/purple_blue_circle_gradient" />
+
+                <TextView
+                    android:id="@+id/anime_ranking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/nunitosansbold"
+                    android:gravity="center"
+                    android:lineSpacingExtra="-5sp"
+                    android:text="null"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/anime_users"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/nunitosansbold"
+                android:gravity="center"
+                android:lineSpacingExtra="-5sp"
+                android:text="null"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_tab_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_detail_card">
+
+        <TextView
+            android:id="@+id/anime_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nunitosansbold"
+            android:gravity="center"
+            android:lineSpacingExtra="-5sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Naruto Shippuden dies das und so"
+            android:textColor="@color/white"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/anime_episodes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/clock_icon"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:letterSpacing="0.01"
+            android:text="null"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:background="#00ffffff"
+            app:tabGravity="center"
+            app:tabIndicator="@drawable/background_tabbar_rounded"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorGravity="stretch"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/background_tabbar_line" />
+    </LinearLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_anime_details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_tab_title" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

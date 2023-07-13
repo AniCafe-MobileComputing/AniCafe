@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Anigram" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q"> false </item>
+    </style>
+
+    <style name="Theme.Anigram" parent="Base.Theme.Anigram" />
+</resources>

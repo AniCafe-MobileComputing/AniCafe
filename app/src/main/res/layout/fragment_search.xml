@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:contextClickable="false"
+    android:background="@drawable/background_gradient"
+    tools:context=".ui.mainFragments.SearchFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:fitsSystemWindows = "true"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <LinearLayout
+                android:paddingTop="30dp"
+                android:paddingBottom="20dp"
+                android:id="@+id/linearLayout_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageButton
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:paddingRight="50dp"
+                    android:paddingLeft="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/dice_button_icon"
+                    android:background="@color/transparent"
+                    android:id="@+id/openShakeButton"
+                    />
+
+                <androidx.appcompat.widget.SearchView
+                    android:layout_weight="1"
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/SearchViewStyle"
+                    app:queryHint="Search..."
+                    app:iconifiedByDefault="false"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:queryBackground="@color/transparent"
+                    app:queryBackground="@android:color/transparent"
+                    android:background="@drawable/background_search"
+                    android:padding="4dp"
+                    app:autoShowKeyboard="false"
+                    app:searchIcon="@drawable/search_icon" />
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_search"
+        android:focusableInTouchMode="false"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginHorizontal="30dp"
+        android:scrollbars="none"
+        android:layout_gravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:id="@+id/search_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

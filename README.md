@@ -7,6 +7,10 @@
 
 The AniCafe app was developed to help anime fans organize their own anime lists. The name "AniCafe" is a combination of the words "Ani" for anime and "Cafe", which on the one hand stands for a pleasant and feel-good ambience and on the other hand alludes to the user's taste, which we try to find out through recommendations and our Random-Anime-Generator.
 The app accesses the popular MyAnimeList.net website through an API, allowing users to manage their existing user accounts and access the extensive anime database. By implementing a modernized UI, engaging animations, and an exciting user interaction experience, AniCafe offers a more attractive and user-friendly experience than before. Our focus on modern UI and animations makes the app a preferred alternative to the official website/app for anime fans.
+### Empfohlener Emulator
+- Smartphone, möglichst groß: Empfohlen ist - Pixel 6 Pro
+- System Image, möglichst neu: Empfohlen ist - API Level 33 / Tiramisu / Android 13.0
+  
 ### Login Data
 To make things easier for you, we have created a MyAnimeList account for you, which already has anime saved in the list.
 

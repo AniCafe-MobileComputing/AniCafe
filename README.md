@@ -12,14 +12,6 @@ The app accesses the popular MyAnimeList.net website through an API, allowing us
 ### Recommended emulator
 - Smartphone, as large as possible: Recommended is - Pixel 6 Pro
 - System image, as new as possible: Recommended is - API Level 33 / Tiramisu / Android 13.0
-  
-### Login Data
-To make things easier for you, we have created a MyAnimeList account for you, which already has anime saved in the list.
-
-```bash
-username: anicafe_test
-password: AniCafe!23
-```
 
 #### How to login:
 Click the Login button and wait for the login page to appear, then enter your details and click Login. Now it is important to wait for allow to appear and click on it only once. This will take you to our App-Startpage. You are now logged in and stored in the store -> no further login is required unless you logout. 
